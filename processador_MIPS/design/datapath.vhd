@@ -4,11 +4,11 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use work.pkg_mips.ALL;
 
 entity datapath is
-    Port ( clk : in STD_LOGIC;
-           rst : in STD_LOGIC;
-           uins : in microinstrucoes;
-           d_address : out bus32;
-           data : inout bus32;
+    Port ( clk         : in STD_LOGIC;
+           rst         : in STD_LOGIC;
+           uins        : in microinstrucoes;
+           d_address   : out bus32;
+           data        : inout bus32;
            instruction : in bus32);
 end datapath;
 
@@ -31,11 +31,11 @@ begin
 	     x"0000" & instruction(15 downto 0);
     -- sinal da ula 
     op2 <= r2 when instR='1' else ext32;
-    inst_ula: entity work.ula port map(op1=r1, op2=r2, resultado=>result, zero=>zero, op_ula=>uins.i);
+    inst_ula: entity work.ula port map(op1=>r1, op2=>r2, resultado=>result, zero=>zero, op_ula=>uins.i);
     -- operacoes de memoria de dados
     d_address <= result;
     
-    data <= r2 when uins.ce='1' and uins.rw='0' else (others=>'Z');
+    data <= r2 when uins.en='1' and uins.rw='0' else (others=>'Z');
     
     reg_dest <= data when uins.i=LW else result;
     

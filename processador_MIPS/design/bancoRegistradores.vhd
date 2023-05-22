@@ -4,13 +4,13 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use work.pkg_mips.ALL;
 
 entity bancoRegistradores is
-    Port ( clk : in STD_LOGIC;
-           rst : in STD_LOGIC;
-           en : in STD_LOGIC;
-           AdRP1 : in std_logic_vector(4 downto 0);
-           AdRP2 : in std_logic_vector(4 downto 0);
-           AdWP : in std_logic_vector(4 downto 0);
-           DataWP : in bus32;
+    Port ( clk     : in STD_LOGIC;
+           rst     : in STD_LOGIC;
+           en      : in STD_LOGIC;
+           AdRP1   : in std_logic_vector(4 downto 0);
+           AdRP2   : in std_logic_vector(4 downto 0);
+           AdWP    : in std_logic_vector(4 downto 0);
+           DataWP  : in bus32;
            DataRP1 : out bus32;
            DataRP2 : out bus32);
 end bancoRegistradores;
@@ -41,7 +41,6 @@ begin
         --g3:if i/=29 generate
         --AQUI
         --end generate;    
-    end generate;
     
     --AQUI
     
