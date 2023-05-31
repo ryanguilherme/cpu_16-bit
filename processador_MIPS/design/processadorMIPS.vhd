@@ -6,14 +6,14 @@ entity processadorMIPS is
     Port ( clk         : in STD_LOGIC;
            rst         : in STD_LOGIC;
            en, rw      : out STD_LOGIC;
-           i_address   : out bus32;
-           d_address   : out bus32;
-           data        : inout bus32;
-           instruction : in bus32);
+           i_address   : out reg32;
+           d_address   : out reg32;
+           data        : inout reg32;
+           instruction : in reg32);
 end processadorMIPS;
 
 architecture Behavioral of processadorMIPS is
-    signal uins : microinstrucoes;
+    signal uins : microinstruction;
 begin
 	dp: entity work.datapath port map
 	(

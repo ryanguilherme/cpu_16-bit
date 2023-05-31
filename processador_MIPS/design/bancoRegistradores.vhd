@@ -10,15 +10,15 @@ entity bancoRegistradores is
            AdRP1   : in std_logic_vector(4 downto 0);
            AdRP2   : in std_logic_vector(4 downto 0);
            AdWP    : in std_logic_vector(4 downto 0);
-           DataWP  : in bus32;
-           DataRP1 : out bus32;
-           DataRP2 : out bus32);
+           DataWP  : in reg32;
+           DataRP1 : out reg32;
+           DataRP2 : out reg32);
 end bancoRegistradores;
 
 architecture Behavioral of bancoRegistradores is
-    type banco_reg is array(0 to 31) of bus32;
+    type banco_reg is array(0 to 31) of reg32;
     signal reg : banco_reg;
-    signal wen : bus32;
+    signal wen : reg32;
 begin
     
     g1: for i in 0 to 31 generate

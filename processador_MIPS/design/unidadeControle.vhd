@@ -6,16 +6,16 @@ use work.pkg_mips.ALL;
 entity unidadeControle is
     Port ( clk         : in STD_LOGIC;
            rst         : in STD_LOGIC;
-           uins        : out microinstrucoes;
-           instruction : in bus32;
-           i_address   : out bus32);
+           uins        : out microinstruction;
+           instruction : in reg32;
+           i_address   : out reg32);
 end unidadeControle;
 
 architecture Behavioral of unidadeControle is
-    signal incpc, pc : bus32;
-    signal i: inst_tipo;
+    signal incpc, pc : reg32;
+    signal i: inst_type;
 begin
-  rpc: entity work.registrador generic map (valorInicial=>X"00400000")
+  rpc: entity work.registrador generic map (valorInicial=>x"00400000")
     port map(clk=>clk, rst=>rst, en=>'1', D=>incpc, Q=>pc);
   incpc <= pc + 4;  
   -- decodificacao de instrucoes
@@ -30,7 +30,7 @@ begin
        ORI    when instruction(31 downto 26)="001101" 						                       else
        LW     when instruction(31 downto 26)="100011" 						                       else
        SW     when instruction(31 downto 26)="101011" 						                       else
-       inst_invalida ; -- condicao "default"
+       invalid_instruction ; -- condicao "default"
          
   assert i/= inst_invalida
     report "Instrucao invalida"

@@ -6,14 +6,14 @@ use work.pkg_mips.ALL;
 entity datapath is
     Port ( clk         : in STD_LOGIC;
            rst         : in STD_LOGIC;
-           uins        : in microinstrucoes;
-           d_address   : out bus32;
-           data        : inout bus32;
-           instruction : in bus32);
+           uins        : in microinstruction;
+           d_address   : out reg32;
+           data        : inout reg32;
+           instruction : in reg32);
 end datapath;
 
 architecture Behavioral of datapath is
-    signal result, r1, r2, ext32, reg_dest, op2 : bus32;
+    signal result, r1, r2, ext32, reg_dest, op2 : reg32;
     signal adD : std_logic_vector(4 downto 0);
     signal instR, zero : std_logic;
 begin
