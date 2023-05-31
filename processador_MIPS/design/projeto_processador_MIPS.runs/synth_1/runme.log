@@ -1,0 +1,285 @@
+
+*** Running vivado
+    with args -log processadorMIPS.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source processadorMIPS.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source processadorMIPS.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 394.320 ; gain = 61.148
+Command: synth_design -top processadorMIPS -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6008
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 832.391 ; gain = 413.172
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'processadorMIPS' [C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/processador_MIPS/design/processadorMIPS.vhd:15]
+INFO: [Synth 8-638] synthesizing module 'datapath' [C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/processador_MIPS/design/datapath.vhd:15]
+INFO: [Synth 8-638] synthesizing module 'bancoRegistradores' [C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/processador_MIPS/design/bancoRegistradores.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'registrador' [C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/processador_MIPS/design/registrador.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'registrador' (0#1) [C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/processador_MIPS/design/registrador.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'bancoRegistradores' (0#1) [C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/processador_MIPS/design/bancoRegistradores.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'ula' [C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/processador_MIPS/design/ula.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'ula' (0#1) [C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/processador_MIPS/design/ula.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'datapath' (0#1) [C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/processador_MIPS/design/datapath.vhd:15]
+INFO: [Synth 8-638] synthesizing module 'unidadeControle' [C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/processador_MIPS/design/unidadeControle.vhd:14]
+INFO: [Synth 8-638] synthesizing module 'registrador__parameterized0' [C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/processador_MIPS/design/registrador.vhd:14]
+	Parameter valorInicial bound to: 32'b00000000010000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'registrador__parameterized0' (0#1) [C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/processador_MIPS/design/registrador.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'unidadeControle' (0#1) [C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/processador_MIPS/design/unidadeControle.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'processadorMIPS' (0#1) [C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/processador_MIPS/design/processadorMIPS.vhd:15]
+WARNING: [Synth 8-3848] Net instR in module/entity datapath does not have driver. [C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/processador_MIPS/design/datapath.vhd:18]
+WARNING: [Synth 8-7129] Port instruction[25] in module unidadeControle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[24] in module unidadeControle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[23] in module unidadeControle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[22] in module unidadeControle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[21] in module unidadeControle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[20] in module unidadeControle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[19] in module unidadeControle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[18] in module unidadeControle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[17] in module unidadeControle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[16] in module unidadeControle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[15] in module unidadeControle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[14] in module unidadeControle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[13] in module unidadeControle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[12] in module unidadeControle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[11] in module unidadeControle is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[31] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[30] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[29] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[28] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[27] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[26] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[10] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[9] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[8] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[7] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[6] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[5] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[4] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[3] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[2] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[1] in module datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instruction[0] in module datapath is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 924.008 ; gain = 504.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 924.008 ; gain = 504.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 924.008 ; gain = 504.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 924.008 ; gain = 504.789
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   3 Input   32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 33    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 5     
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:55 . Memory (MB): peak = 1189.465 ; gain = 770.246
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:56 . Memory (MB): peak = 1198.375 ; gain = 779.156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:58 . Memory (MB): peak = 1198.535 ; gain = 779.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:01:07 . Memory (MB): peak = 1198.535 ; gain = 779.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:01:07 . Memory (MB): peak = 1198.535 ; gain = 779.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:01:08 . Memory (MB): peak = 1198.535 ; gain = 779.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:01:08 . Memory (MB): peak = 1198.535 ; gain = 779.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:01:08 . Memory (MB): peak = 1198.535 ; gain = 779.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:01:08 . Memory (MB): peak = 1198.535 ; gain = 779.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    24|
+|3     |LUT1   |     1|
+|4     |LUT2   |    68|
+|5     |LUT3   |    35|
+|6     |LUT4   |     9|
+|7     |LUT5   |    69|
+|8     |LUT6   |   657|
+|9     |MUXF7  |   256|
+|10    |FDCE   |  1021|
+|11    |FDPE   |     1|
+|12    |IBUF   |    29|
+|13    |IOBUF  |    32|
+|14    |OBUF   |    66|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------+----------------------------+------+
+|      |Instance          |Module                      |Cells |
++------+------------------+----------------------------+------+
+|1     |top               |                            |  2269|
+|2     |  ct              |unidadeControle             |    39|
+|3     |    rpc           |registrador__parameterized0 |    39|
+|4     |  dp              |datapath                    |  2101|
+|5     |    REGS          |bancoRegistradores          |  2085|
+|6     |      \g1[10].rx  |registrador                 |    33|
+|7     |      \g1[11].rx  |registrador_0               |   161|
+|8     |      \g1[12].rx  |registrador_1               |    33|
+|9     |      \g1[13].rx  |registrador_2               |    33|
+|10    |      \g1[14].rx  |registrador_3               |    34|
+|11    |      \g1[15].rx  |registrador_4               |    97|
+|12    |      \g1[16].rx  |registrador_5               |    33|
+|13    |      \g1[17].rx  |registrador_6               |    33|
+|14    |      \g1[18].rx  |registrador_7               |    33|
+|15    |      \g1[19].rx  |registrador_8               |   161|
+|16    |      \g1[1].rx   |registrador_9               |    33|
+|17    |      \g1[20].rx  |registrador_10              |    33|
+|18    |      \g1[21].rx  |registrador_11              |    33|
+|19    |      \g1[22].rx  |registrador_12              |    33|
+|20    |      \g1[23].rx  |registrador_13              |    97|
+|21    |      \g1[24].rx  |registrador_14              |    33|
+|22    |      \g1[25].rx  |registrador_15              |    33|
+|23    |      \g1[26].rx  |registrador_16              |    33|
+|24    |      \g1[27].rx  |registrador_17              |   417|
+|25    |      \g1[28].rx  |registrador_18              |    33|
+|26    |      \g1[29].rx  |registrador_19              |    33|
+|27    |      \g1[2].rx   |registrador_20              |    33|
+|28    |      \g1[30].rx  |registrador_21              |    33|
+|29    |      \g1[31].rx  |registrador_22              |   134|
+|30    |      \g1[3].rx   |registrador_23              |   161|
+|31    |      \g1[4].rx   |registrador_24              |    33|
+|32    |      \g1[5].rx   |registrador_25              |    33|
+|33    |      \g1[6].rx   |registrador_26              |    33|
+|34    |      \g1[7].rx   |registrador_27              |    97|
+|35    |      \g1[8].rx   |registrador_28              |    33|
+|36    |      \g1[9].rx   |registrador_29              |    33|
+|37    |    inst_ula      |ula                         |    16|
++------+------------------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:01:08 . Memory (MB): peak = 1198.535 ; gain = 779.316
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 34 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:42 ; elapsed = 00:01:08 . Memory (MB): peak = 1198.535 ; gain = 779.316
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:01:08 . Memory (MB): peak = 1198.535 ; gain = 779.316
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1210.422 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 312 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1229.805 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 32 instances
+
+Synth Design complete, checksum: 8fb848ce
+INFO: [Common 17-83] Releasing license: Synthesis
+27 Infos, 34 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:01:12 . Memory (MB): peak = 1229.805 ; gain = 835.484
+INFO: [Common 17-1381] The checkpoint 'C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/processador_MIPS/design/projeto_processador_MIPS.runs/synth_1/processadorMIPS.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file processadorMIPS_utilization_synth.rpt -pb processadorMIPS_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed May 31 00:07:19 2023...

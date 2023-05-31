@@ -1,0 +1,7 @@
+Time resolution is 1 ps
+Error: Instrucao invalida
+Time: 0 ps  Iteration: 1  Process: /testbench/cpu/ct/line__35  File: C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/processador_MIPS/design/unidadeControle.vhd
+Error: Instrucao invalida
+Time: 3600 ps  Iteration: 3  Process: /testbench/cpu/ct/line__35  File: C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/processador_MIPS/design/unidadeControle.vhd
+Error: Instrucao invalida
+Time: 360 ns  Iteration: 7  Process: /testbench/cpu/ct/line__35  File: C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/processador_MIPS/design/unidadeControle.vhd

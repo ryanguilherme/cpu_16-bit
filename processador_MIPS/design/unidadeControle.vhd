@@ -32,7 +32,7 @@ begin
        SW     when instruction(31 downto 26)="101011" 						                       else
        invalid_instruction ; -- condicao "default"
          
-  assert i/= inst_invalida
+  assert i/= invalid_instruction
     report "Instrucao invalida"
     severity error;
   -- gerador de sinais de controle para acesso a memoria externa

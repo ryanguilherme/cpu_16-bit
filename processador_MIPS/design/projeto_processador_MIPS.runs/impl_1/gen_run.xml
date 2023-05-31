@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1685502476">
+  <File Type="ROUTE-PWR" Name="processadorMIPS_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="processadorMIPS.tcl"/>
+  <File Type="BITSTR-MMI" Name="processadorMIPS.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="processadorMIPS_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="processadorMIPS_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="processadorMIPS_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="processadorMIPS_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="processadorMIPS_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="processadorMIPS_opt.dcp"/>
+  <File Type="OPT-DRC" Name="processadorMIPS_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="processadorMIPS.hwdef"/>
+  <File Type="PWROPT-DCP" Name="processadorMIPS_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="processadorMIPS_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="processadorMIPS_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="processadorMIPS_placed.dcp"/>
+  <File Type="PLACE-IO" Name="processadorMIPS_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="processadorMIPS_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="processadorMIPS_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="processadorMIPS_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="processadorMIPS_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="processadorMIPS_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="processadorMIPS_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="processadorMIPS.bin"/>
+  <File Type="PLACE-TIMING" Name="processadorMIPS_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="processadorMIPS_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="processadorMIPS.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="processadorMIPS_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="processadorMIPS_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="processadorMIPS_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="processadorMIPS.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="processadorMIPS_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="processadorMIPS_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="processadorMIPS_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="processadorMIPS_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="processadorMIPS_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="processadorMIPS_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="processadorMIPS_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="processadorMIPS_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="processadorMIPS_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="processadorMIPS_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="processadorMIPS_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="processadorMIPS_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="processadorMIPS_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="processadorMIPS_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="processadorMIPS_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="processadorMIPS_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="processadorMIPS_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="processadorMIPS_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="processadorMIPS_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="processadorMIPS_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="processadorMIPS_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="processadorMIPS_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="processadorMIPS_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="processadorMIPS_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="processadorMIPS_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="processadorMIPS_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="processadorMIPS_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="processadorMIPS.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="processadorMIPS_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="processadorMIPS_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="processadorMIPS.nky"/>
+  <File Type="BITSTR-BMM" Name="processadorMIPS_bd.bmm"/>
+  <File Type="PDI-FILE" Name="processadorMIPS.pdi"/>
+  <File Type="RCFI_FILE" Name="processadorMIPS.rcfi"/>
+  <File Type="CFI_FILE" Name="processadorMIPS.cfi"/>
+  <File Type="RNPI_FILE" Name="processadorMIPS.rnpi"/>
+  <File Type="NPI_FILE" Name="processadorMIPS.npi"/>
+  <File Type="RBD_FILE" Name="processadorMIPS.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="processadorMIPS.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="processadorMIPS.sysdef"/>
+  <File Type="BG-BGN" Name="processadorMIPS.bgn"/>
+  <File Type="BG-DRC" Name="processadorMIPS.drc"/>
+  <File Type="RDI-RDI" Name="processadorMIPS.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-RQS" Name="processadorMIPS_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="processadorMIPS_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/pkg_mips.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/registrador.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/bancoRegistradores.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/ula.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/datapath.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/unidadeControle.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/processadorMIPS.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/RAM_mem.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/aux_functions.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="processadorMIPS"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/prog.txt"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>
