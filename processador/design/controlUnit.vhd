@@ -19,7 +19,7 @@ entity controlUnit is
 		ula_op 		: 	out std_logic_vector(3 downto 0);
 		estado 		: 	out std_logic_vector(3 downto 0) 
 	);
-end controUnit;
+end controlUnit;
 
 architecture Behavorial of controlUnit is
 	signal PC_inc 	: std_logic;

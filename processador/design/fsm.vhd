@@ -18,14 +18,14 @@ entity fsm is
 		Rn_sel: 	out std_logic_vector(2 downto 0);
 		RF_sel: 	out std_logic_vector(1 downto 0);
 		Rd_sel: 	out std_logic_vector(2 downto 0);
-		Rd_wr: 		out std_logic
-		ula_op:		out std_logic_vector(3 downto 0);	
+		Rd_wr: 		out std_logic;
+		ula_op:		out std_logic_vector(3 downto 0)
 	);
 end fsm;
 
 architecture Behavorial of fsm is
 	type estados is (init, fetch, decode, exec_nop, exec_halt, exec_mov, exec_load, exec_store, exec_ula);
-	signal PN,NS : estados;
+	signal PN,NS,PS : estados;
 
 	signal instruction : std_logic_vector(N-1 downto 0);
 	signal sinal_estado : std_logic_vector(3 downto 0);
@@ -51,7 +51,7 @@ begin
 				RAM_sel 	<= '0';
 				RAM_we 		<= '0';
 				RF_sel 		<= "00";
-				Rd_sel 		<= "00"
+				Rd_sel 		<= "00";
 				Rd_wr 		<= '0';
 				Rm_sel 		<= "000";
 				Rn_sel 		<= "000";
@@ -65,7 +65,7 @@ begin
                 RAM_sel     <= '0';
                 RAM_we      <= '0';
                 RF_sel      <= "00";
-                Rd_sel      <= "00"
+                Rd_sel      <= "00";
                 Rd_wr       <= '0';
                 Rm_sel      <= "000";
                 Rn_sel      <= "000";
@@ -79,7 +79,7 @@ begin
                 RAM_sel     <= '0';
                 RAM_we      <= '0';
                 RF_sel      <= "00";
-                Rd_sel      <= "00"
+                Rd_sel      <= "00";
                 Rd_wr       <= '0';
                 Rm_sel      <= "000";
                 Rn_sel      <= "000";
@@ -116,13 +116,13 @@ begin
 				Rm_sel	<= instruction(7 downto 5);
 				NS 		<= fetch;
 			when exec_store =>
-				Immed   <= x"00" & instruction(10 downto 8) & instruction(4 downto 0)
+				Immed   <= x"00" & instruction(10 downto 8) & instruction(4 downto 0);
                 Rm_sel  <= instruction(7 downto 5);
                 RAM_we  <= '1';
 				RAM_sel <= instruction(11);
    				NS 		<= fetch;
 			when exec_ula   =>
-		end case
+		end case;
 	end process;	
 
 
