@@ -1,0 +1,10 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Users/leroy/Downloads/codigos_vhdl/vhdl_code/alu.vhd,1686859804,vhdl,C:/Users/leroy/Downloads/codigos_vhdl/vhdl_sim/testbench.vhd,,,alu,,,,,,,,
+C:/Users/leroy/Downloads/codigos_vhdl/vhdl_code/decode.vhd,1686860229,vhdl,C:/Users/leroy/Downloads/codigos_vhdl/vhdl_sim/testbench.vhd,,,decode,,,,,,,,
+C:/Users/leroy/Downloads/codigos_vhdl/vhdl_code/pkg_processor.vhd,1686847561,vhdl,C:/Users/leroy/Downloads/codigos_vhdl/vhdl_code/alu.vhd;C:/Users/leroy/Downloads/codigos_vhdl/vhdl_code/decode.vhd;C:/Users/leroy/Downloads/codigos_vhdl/vhdl_sim/testbench.vhd,,,pkg_processor,,,,,,,,
+C:/Users/leroy/Downloads/codigos_vhdl/vhdl_code/reg8_16bits.vhd,1686849018,vhdl,C:/Users/leroy/Downloads/codigos_vhdl/vhdl_sim/testbench.vhd,,,reg8_16bits,,,,,,,,
+C:/Users/leroy/Downloads/codigos_vhdl/vhdl_sim/tb_ula.vhd,1686851449,vhdl,,,,tb_ula,,,,,,,,
+C:/Users/leroy/Downloads/codigos_vhdl/vhdl_sim/testbench.vhd,1686860880,vhdl,,,,testbench,,,,,,,,

@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../../../../../Downloads/codigos_vhdl/vhdl_code/pkg_processor.vhd" \
+"../../../../../../../../../../Downloads/codigos_vhdl/vhdl_code/alu.vhd" \
+"../../../../../../../../../../Downloads/codigos_vhdl/vhdl_code/decode.vhd" \
+"../../../../../../../../../../Downloads/codigos_vhdl/vhdl_code/reg8_16bits.vhd" \
+"../../../../../../../../../../Downloads/codigos_vhdl/vhdl_sim/testbench.vhd" \
+
+# Do not sort compile order
+nosort
