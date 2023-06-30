@@ -1,0 +1,18 @@
+-- +----------------+-----------------+-------+-------------+----+---------------------------------------------+
+-- | INSTRUCTION    | OPERATION       | TYPE  | 15 14 13 12 | 11 | 10  9   8   7   6   5   4   3   2   1   0   |
+-- +----------------+-----------------+-------+-------------+----+---------------------------------------------+
+-- | NOP            | nop             | NOP   | 0  0  0  0  | 0  | 0   0   0   0   0   0   0   0   0   0   0   |
+-- | HALT           | halt            | HALT  | 1  1  1  1  | 1  | 1   1   1   1   1   1   1   1   1   1   1   |
+-- | MOV Rd, Rm     | Rd = Rm         | MOV   | 0  0  0  1  | 0  | Rd2 Rd1 Rd0 Rm2 Rm1 Rm0 -   -   -   -   -   |
+-- | MOV Rd, #Im    | Rd = #Im        | MOV   | 0  0  0  1  | 1  | Rd2 Rd1 Rd0 Im7 Im6 Im5 Im4 Im3 Im2 Im1 Im0 |
+-- | STR [Rm], Rn   | [Rm] = Rn       | STORE | 0  0  1  0  | 0  | -   -   -   Rm2 Rm1 Rm0 Rn2 Rn1 Rn0 -   -   |
+-- | STR [Rm], #Im  | [Rm] = #Im      | STORE | 0  0  1  0  | 1  | Im7 Im6 Im5 Rm2 Rm1 Rm0 Im4 Im3 Im2 Im1 Im0 |
+-- | LDR Rd, [Rm]   | Rd = [Rm]       | LOAD  | 0  0  1  1  | -  | Rd2 Rd1 Rd0 Rm2 Rm1 Rm0 -   -   -   -   -   |
+-- | ADD Rd, Rm, Rn | Rd = Rm + Rn    |  ALU  | 0  1  0  0  | -  | Rd2 Rd1 Rd0 Rm2 Rm1 Rm0 Rn2 Rn1 Rn0 -   -   |
+-- | SUB Rd, Rm, Rn | Rd = Rm - Rn    |  ALU  | 0  1  0  1  | -  | Rd2 Rd1 Rd0 Rm2 Rm1 Rm0 Rn2 Rn1 Rn0 -   -   |
+-- | MUL Rd, Rm, Rn | Rd = Rm * Rn    |  ALU  | 0  1  1  0  | -  | Rd2 Rd1 Rd0 Rm2 Rm1 Rm0 Rn2 Rn1 Rn0 -   -   |
+-- | AND Rd, Rm, Rn | Rd = Rm and Rn  |  ALU  | 0  1  1  1  | -  | Rd2 Rd1 Rd0 Rm2 Rm1 Rm0 Rn2 Rn1 Rn0 -   -   |
+-- | ORR Rd, Rm, Rn | Rd = Rm or Rn   |  ALU  | 1  0  0  0  | -  | Rd2 Rd1 Rd0 Rm2 Rm1 Rm0 Rn2 Rn1 Rn0 -   -   |
+-- | NOT Rd, Rm     | Rd = ¬Rm        |  ALU  | 1  0  0  1  | -  | Rd2 Rd1 Rd0 Rm2 Rm1 Rm0 -   -   -   -   -   |
+-- | XOR Rd, Rm, Rn | Rd = Rm xor Rn  |  ALU  | 1  0  1  0  | -  | Rd2 Rd1 Rd0 Rm2 Rm1 Rm0 Rn2 Rn1 Rn0 -   -   |
+-- +----------------+-----------------+-------+-------------+----+---------------------------------------------+

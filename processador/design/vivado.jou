@@ -12,3 +12,6 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/processador/design/projeto_processador_16bits.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

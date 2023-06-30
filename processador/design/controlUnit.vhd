@@ -8,6 +8,7 @@ entity controlUnit is
 		clk			:   std_logic;
 		rst 		:   std_logic;
 		Immed 		: 	out std_logic_vector(N-1 downto 0);
+		IR_data     :   in  std_logic;
 		ROM_addr 	: 	out std_logic;
 		RAM_sel 	: 	out std_logic;
 		RAM_we 		: 	out std_logic;
