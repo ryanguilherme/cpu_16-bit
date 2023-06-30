@@ -35,6 +35,7 @@ begin
             end if;
         end if;
     end process;
+    dout <= ram_block(to_integer(unsigned(addr)));
 
 end Behavioral;
 

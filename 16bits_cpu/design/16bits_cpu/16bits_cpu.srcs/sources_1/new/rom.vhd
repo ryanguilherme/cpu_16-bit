@@ -22,8 +22,16 @@ entity rom is
 end rom;
 
 architecture Behavioral of rom is
-    type memory is array(0 to (2**addr_width)-1) of std_logic_vector(data_width-1 downto 0);        -- 65353 blocks memory
-    signal rom_block : memory := (others => (others => '0'));
+    type memory is array(0 to (2**addr_width)-1) of std_logic_vector(data_width-1 downto 0);        -- 65355 blocks memory
+    signal rom_block : memory := (
+        0 => x"1234",
+        1 => x"5678",
+        2 => x"9041",
+        3 => x"FFFF",
+        4 => x"A1B2",
+        5 => x"F1D1",
+        others => (others => '0')
+    );
     
 begin
     process(clk)
