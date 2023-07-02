@@ -43,7 +43,7 @@ begin
         wait;
     end process;
     
-    -- ROM CURRENTY FILL
+    -- ROM FILL
     -- +--------------+
     -- |     ROM      |
     -- +------+-------+

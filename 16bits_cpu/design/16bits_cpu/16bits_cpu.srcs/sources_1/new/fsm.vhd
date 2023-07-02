@@ -18,7 +18,7 @@ entity fsm is
         PC_clr  : out std_logic;                        -- reset PC
         PC_inc  : out std_logic;                        -- PC increment (+2)
         IR_load : out std_logic;                        -- enable IR to load instruction from ROM
-        IR_data : in  std_logic;                        -- instruction data received from ROM (16 bits)
+        IR_data : in  std_logic_vector(N-1 downto 0);   -- instruction data received from ROM (16 bits)
         Immed   : out std_logic_vector(N-1 downto 0);   -- Immediate value
         RAM_sel : out std_logic;                        -- RAM value selector (immediate or register)
         RAM_we  : out std_logic;                        -- enable RAM write
@@ -39,6 +39,7 @@ architecture Behavioral of fsm is
     
 
 begin
+    instruction <= IR_data;
     process(clk, rst)
     begin
         if rst = '1' then
@@ -65,6 +66,7 @@ begin
                 Rm_sel  <= "000";
                 Rn_sel  <= "000";
                 ula_op  <= "0000";
+                NS <= fetch;
                 
             when fetch  =>
                 PC_clr  <= '0';
@@ -80,6 +82,7 @@ begin
                 Rm_sel  <= "000";
                 Rn_sel  <= "000";
                 ula_op  <= "0000";
+                NS <= decode;
             
             when decode =>
                 PC_clr  <= '0';
@@ -177,8 +180,8 @@ begin
                     RF_sel <= "00";
                 elsif instruction(11) = '1' then
                     Rd_sel <= instruction(10 downto 8);
-                    Immed  <= instruction(7 downto 0);
-                    Rd_sel <= instruction(7 downto 0);
+                    Immed  <= x"00" & instruction(7 downto 0);
+                    Rd_sel <= instruction(7 downto 5);
                     RF_sel <= "10";
                 end if;
                 NS <= fetch;

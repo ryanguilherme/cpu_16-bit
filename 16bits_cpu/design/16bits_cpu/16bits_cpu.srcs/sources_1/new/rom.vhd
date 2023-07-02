@@ -17,7 +17,7 @@ entity rom is
         clk     : in  std_logic;                                    -- clock
         en      : in  std_logic;                                    -- enable
         addr    : in  std_logic_vector(addr_width-1 downto 0);      -- address input
-        dout    : out std_logic_vector(data_width-1 downto 0)       -- instruction output
+        dout    : out std_logic_vector(data_width-1 downto 0)       -- instruction data output
     );
 end rom;
 
