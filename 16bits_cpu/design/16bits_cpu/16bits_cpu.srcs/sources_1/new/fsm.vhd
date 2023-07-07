@@ -4,6 +4,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.std_logic_arith.ALL;
 
 entity fsm is
     Generic
@@ -27,7 +28,8 @@ entity fsm is
         Rd_wr   : out std_logic;                        -- Register file Rd enable
         Rm_sel  : out std_logic_vector(2 downto 0);     -- Register file Rm selector
         Rn_sel  : out std_logic_vector(2 downto 0);     -- Register file Rn selector
-        ula_op  : out std_logic_vector(3 downto 0)      -- ULA operation
+        ula_op  : out std_logic_vector(3 downto 0);      -- ULA operation
+        state  : out std_logic_vector(3 downto 0)      -- ULA operation
     );
 end fsm;
 
@@ -40,6 +42,7 @@ architecture Behavioral of fsm is
 
 begin
     instruction <= IR_data;
+        
     process(clk, rst)
     begin
         if rst = '1' then
@@ -66,8 +69,8 @@ begin
                 Rm_sel  <= "000";
                 Rn_sel  <= "000";
                 ula_op  <= "0000";
-                NS <= fetch;
-                
+                NS      <= fetch;
+                state   <= "0001";                 
             when fetch  =>
                 PC_clr  <= '0';
                 PC_inc  <= '1';
@@ -82,8 +85,9 @@ begin
                 Rm_sel  <= "000";
                 Rn_sel  <= "000";
                 ula_op  <= "0000";
-                NS <= decode;
-            
+                NS      <= decode;
+                state   <= "0010";
+                             
             when decode =>
                 PC_clr  <= '0';
                 PC_inc  <= '0';
@@ -144,33 +148,46 @@ begin
 -- | XOR Rd, Rm, Rn | Rd = Rm xor Rn  |  ALU  | 1  0  1  0  | -  | Rd2 Rd1 Rd0 Rm2 Rm1 Rm0 Rn2 Rn1 Rn0 -   -   |
 -- +----------------+-----------------+-------+-------------+----+---------------------------------------------+
             
-            if instruction(15 downto 0) = x"0000" then
+            if    instruction(15 downto 0) = x"0000" then
                 NS <= exec_nop;
+                state   <= "0011";
             elsif instruction(15 downto 0) = x"FFFF" then
                 NS <= exec_halt;
+                state   <= "0100";
             elsif instruction(15 downto 12) = "0001" then
                 NS <= exec_mov;
+                state   <= "0101";
             elsif instruction(15 downto 12) = "0010" then
                 NS <= exec_store;
+                state   <= "0111";
             elsif instruction(15 downto 12) = "0011" then
                 NS <= exec_load;
-            elsif instruction(15 downto 12) = "0100" or 
-                  instruction(15 downto 12) = "0101" or 
-                  instruction(15 downto 12) = "0110" or
-                  instruction(15 downto 12) = "0111" or
-                  instruction(15 downto 12) = "1000" or
-                  instruction(15 downto 12) = "1001" or
-                  instruction(15 downto 12) = "1010" then
+                state   <= "1000";
+            elsif instruction(15 downto 12) = "0100" or     -- ADD
+                  instruction(15 downto 12) = "0101" or     -- SUB
+                  instruction(15 downto 12) = "0110" or     -- MUL
+                  instruction(15 downto 12) = "0111" or     -- AND
+                  instruction(15 downto 12) = "1000" or     -- ORR
+                  instruction(15 downto 12) = "1001" or     -- NOT
+                  instruction(15 downto 12) = "1010" or     -- XOR
+                  instruction(15 downto 12) = "1011" or     -- SHR
+                  instruction(15 downto 12) = "1100" or     -- SHL
+                  instruction(15 downto 12) = "1101" or     -- ROR
+                  instruction(15 downto 12) = "1110" then   -- ROL
                 NS <= exec_ula;
+                state   <= "1001";
             else
                 NS <= exec_nop;
+                state   <= "1010";
             end if;
             
             when exec_nop =>
                 NS <= fetch;
+                state   <= "0010";
             
             when exec_halt =>
                 NS <= exec_halt;
+                state   <= "1011";
             
             when exec_mov =>
                 if    instruction(11) = '0' then
@@ -185,6 +202,7 @@ begin
                     RF_sel <= "10";
                 end if;
                 NS <= fetch;
+                state   <= "1100";
             
             when exec_store =>
                 if    instruction(11) = '0' then
@@ -197,12 +215,15 @@ begin
                 RAM_we  <= '1';
                 RAM_sel <= instruction(11); 
                 NS <= fetch;
+                state   <= "1101";
                 
             when exec_load =>
                 Rd_sel <= instruction(10 downto 8);
                 Rm_sel <= instruction(7 downto 5);
                 RF_sel <= "01";
                 Rd_wr  <= '1';
+                NS <= fetch;
+                state   <= "1111";
             
             when exec_ula =>
                 Rd_sel <= instruction(10 downto 8);
@@ -210,9 +231,12 @@ begin
                 Rn_sel <= instruction(4 downto 2);
                 RF_sel <= "11";
                 Rd_wr  <= '1';
-            
+                ula_op <= instruction(15 downto 12);
+                NS <= fetch;
+                state   <= "1001";
             when others =>
                 NS <= fetch;
+                state   <= "0010";
         
         end case;
     end process;

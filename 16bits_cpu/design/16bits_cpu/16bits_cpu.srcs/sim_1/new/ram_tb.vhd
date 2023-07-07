@@ -13,11 +13,12 @@ entity ram_tb is
 end ram_tb;
 
 architecture Simulation of ram_tb is
-    signal clk_sim  : std_logic;                                    -- clock signal
-    signal we_sim   : std_logic;                                    -- write enable signal
-    signal addr_sim : std_logic_vector(addr_width-1 downto 0);      -- address signal
-    signal din_sim  : std_logic_vector(data_width-1 downto 0);      -- data input signal
-    signal dout_sim : std_logic_vector(data_width-1 downto 0);      -- data output signal
+    signal clk_sim      : std_logic;                                    -- clock signal
+    signal we_sim       : std_logic;                                    -- write enable signal
+    signal stack_en_sim : std_logic;                                    -- stack enable signal
+    signal addr_sim     : std_logic_vector(addr_width-1 downto 0);      -- address signal
+    signal din_sim      : std_logic_vector(data_width-1 downto 0);      -- data input signal
+    signal dout_sim     : std_logic_vector(data_width-1 downto 0);      -- data output signal
 begin
     RAM : entity work.ram          -- instantiate a RAM component for simulation
         Generic map
@@ -27,11 +28,12 @@ begin
         )
         Port map
         (
-            clk     => clk_sim,
-            we      => we_sim,
-            addr    => addr_sim,
-            din     => din_sim,
-            dout    => dout_sim
+            clk      => clk_sim,
+            we       => we_sim,
+            stack_en => stack_en_sim,
+            addr     => addr_sim,
+            din      => din_sim,
+            dout     => dout_sim
         );
     
     clk_process : process           -- clock process

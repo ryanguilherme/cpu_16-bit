@@ -12,10 +12,11 @@ entity alu_tb is
 end alu_tb;
 
 architecture Simulation of alu_tb is
-    signal A_sim  : std_logic_vector(N-1 downto 0);
-    signal B_sim  : std_logic_vector(N-1 downto 0);
-    signal op_sim : std_logic_vector(3 downto 0);
-    signal Q_sim  : std_logic_vector(N-1 downto 0);
+    signal A_sim     : std_logic_vector(N-1 downto 0);
+    signal B_sim     : std_logic_vector(N-1 downto 0);
+    signal Immed_sim : std_logic_vector(N-1 downto 0);
+    signal op_sim    : std_logic_vector(3 downto 0);
+    signal Q_sim     : std_logic_vector(N-1 downto 0);
 
 begin
     
@@ -34,10 +35,11 @@ begin
     ALU : entity work.alu       -- initialize a ALU component for simulation
         Port map
         (
-            A   => A_sim,
-            B   => B_sim,
-            op  => op_sim,
-            Q   => Q_sim
+            A     => A_sim,
+            B     => B_sim,
+            Immed => Immed_sim,
+            op    => op_sim,
+            Q     => Q_sim
         );
     
     stimulus_proc : process

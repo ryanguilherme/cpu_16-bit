@@ -28,6 +28,7 @@ architecture Simulation of fsm_tb is
     signal Rm_sel_sim  : std_logic_vector(2 downto 0);     -- Register file Rm selector signal
     signal Rn_sel_sim  : std_logic_vector(2 downto 0);     -- Register file Rn selector signal
     signal ula_op_sim  : std_logic_vector(3 downto 0);     -- ULA operation signal
+    signal state_signal : std_logic_vector(3 downto 0);
 begin
     FSM : entity work.fsm           -- FSM instatiate for simulation
         Generic map
@@ -51,7 +52,8 @@ begin
             Rd_wr   => Rd_wr_sim,
             Rm_sel  => Rm_sel_sim,
             Rn_sel  => Rn_sel_sim,
-            ula_op  => ula_op_sim
+            ula_op  => ula_op_sim,
+            state   => state_signal
         );
     
     clk_process : process           -- clock process
@@ -65,26 +67,35 @@ begin
         wait;
     end process;
     
+    rst:process
+    begin
+        rst_sim <= '1';
+        wait for 2*5 ns;
+        rst_sim <= '0';
+        wait;
+    end process;
+    
     stimulus_process : process      -- stimulus process
     begin
+        wait until rst_sim = '0';
         -- TEST 1 :
-        IR_data_sim <= x"47F1";
+        IR_data_sim <= x"47f1";
         wait for 10 ns;
         
         -- TEST 2 :
-        IR_data_sim <= x"13A4";
+        IR_data_sim <= "0001001110100100";
         wait for 10 ns;
         
         -- TEST 3 :
-        IR_data_sim <= x"B402";
+        IR_data_sim <= "1011010000000010";
         wait for 10 ns;
         
         -- TEST 4 :
-        IR_data_sim <= x"0000";
+        IR_data_sim <= "0000000000000000";
         wait for 10 ns;
         
         -- TEST 5 :
-        IR_data_sim <= x"FFFF";
+        IR_data_sim <= "1111111111111111";
         wait for 10 ns;
         
         -- END SIMULATION
