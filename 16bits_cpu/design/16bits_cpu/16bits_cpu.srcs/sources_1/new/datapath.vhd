@@ -13,6 +13,8 @@ entity datapath is
     (
         clk      : in  std_logic;                       -- clock
         rst      : in  std_logic;                       -- reset
+        zero     : out std_logic;                       -- ZERO? flag
+        carry    : out std_logic;                       -- CARRY flag
         RF_sel   : in  std_logic_vector(1 downto 0);    -- Register file Rd in selector
         Rd_sel   : in  std_logic_vector(2 downto 0);    -- Register Rd selector
         Rd_wr    : in  std_logic := '0';                -- Rd write
@@ -70,9 +72,11 @@ begin
         (
             A     => Rm_signal,
             B     => Rn_signal,
+            zero  => zero,
+            carry => carry,
             Immed => Immed,
-            Q     => alu_out_signal,
-            op    => alu_op
+            op    => alu_op,
+            Q     => alu_out_signal
         );
 
 end Behavioral;
