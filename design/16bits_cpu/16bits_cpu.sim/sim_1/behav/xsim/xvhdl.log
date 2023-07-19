@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/16bits_cpu/design/16bits_cpu/16bits_cpu.srcs/sources_1/new/fsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fsm'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/16bits_cpu/design/16bits_cpu/16bits_cpu.srcs/sim_1/new/fsm_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fsm_tb'
