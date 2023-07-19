@@ -1,8 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/zybo/zybo_intro/design/shift_register.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'shift_register'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/zybo/zybo_intro/design/tmds_encoder.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tmds_encoder'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/zybo/zybo_intro/design/video_sync.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'video_sync'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/zybo/zybo_intro/design/video_out.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'video_out'

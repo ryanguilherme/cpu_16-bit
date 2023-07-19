@@ -1,9 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../design/shift_register.vhd" \
-"../../../../design/tmds_encoder.vhd" \
-"../../../../design/video_sync.vhd" \
-"../../../../design/video_out.vhd" \
-
-# Do not sort compile order
-nosort

@@ -1,9 +1,0 @@
-0.7
-2020.2
-Oct 14 2022
-05:20:55
-C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/zybo/zybo_intro/design/shift_register.vhd,1687972179,vhdl,C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/zybo/zybo_intro/design/video_out.vhd,,,shift_register,,,,,,,,
-C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/zybo/zybo_intro/design/tmds_encoder.vhd,1687972180,vhdl,C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/zybo/zybo_intro/design/video_out.vhd,,,tmds_encoder,,,,,,,,
-C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/zybo/zybo_intro/design/video_out.vhd,1687972180,vhdl,,,,video_out,,,,,,,,
-C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/zybo/zybo_intro/design/video_sync.vhd,1687972180,vhdl,C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/zybo/zybo_intro/design/video_out.vhd,,,video_sync,,,,,,,,
-C:/Users/leroy/OneDrive/Documentos/ufc/eng_comp/sistemas_digitais/zybo/zybo_intro/zybo_intro.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
