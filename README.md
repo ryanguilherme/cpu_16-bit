@@ -32,7 +32,7 @@ README.md                # Project resume (you are here)
 1. Clone the repository:
 
 ```
-git clone https://github.com/your-username/16-bit-processor.git
+git clone https://github.com/ryanguilherme/16-bit-processor.git
 ```
 
 2. Open Vivado and create a new project.
